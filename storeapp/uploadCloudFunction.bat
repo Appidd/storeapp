@@ -1,0 +1,1 @@
+"D:\software\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-7goufaa7b29b882d --n quickstartFunctions --r --project "E:\mini\鸿泰仓库管理系统\storeapp" --report_first --report

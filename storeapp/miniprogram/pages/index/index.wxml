@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+<view bindtap="login">登录</view>
+</view>
