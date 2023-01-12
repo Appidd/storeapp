@@ -1,0 +1,116 @@
+
+page{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: relative;
+    background-color: skyblue;
+    background-image: url('https://cangku.nxcsoft.top/bg2.png');
+   
+    font-style: 30rpx;
+}
+
+.chosetab{
+    
+    margin-top: 20rpx;
+    width: 700rpx;
+    height: 90rpx;
+    background-color: white;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-radius: 10rpx;
+   
+}
+.btn{
+height: 90rpx;
+width: 350rpx;
+line-height: 90rpx;
+text-align: center;
+box-sizing: border-box;
+}
+.btn:first-child{
+    border-radius: 10rpx 0rpx 0rpx 10rpx;
+}
+.btn:last-child{
+    border-radius: 0rpx 10rpx 10rpx 0rpx;
+}
+.chbtn{
+   color: white;
+    background-image:linear-gradient(to right,#303BF8,#1D86FF);
+    box-sizing: border-box;
+}
+.card{
+  margin-top: 20rpx;
+  width: 750rpx;
+ 
+  /* background-color: white; */
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 100rpx;
+
+}
+.scroll{
+  margin-top: 10rpx;
+  width: 100%;
+  height: 85vh;
+  /* background-color: red; */
+}
+.peoplecard{
+  /* height: 200rpx; */
+  width: 700rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  position: relative;
+}
+.name{
+  font-size: 30rpx;
+}
+.set{
+  width: 40rpx;
+  height: 40rpx;
+  /* background-color: red; */
+  position: absolute;
+  right: 15rpx;
+  top: 15rpx;
+}
+.item{
+    font-size: 28rpx;
+    width: 600rpx;
+    color: gray;
+    
+    /* text-align: center; */
+    margin-top: 20rpx;
+    /* height: 80rpx; */
+    border-radius: 10rpx;
+    /* line-height: 80rpx; */
+    padding: 30rpx 20rpx;
+    line-height: 40rpx;
+    background-color: #f7f8fa;
+  }
+  .item view{
+      line-height: 50rpx;
+  }
+  .goodsitem{
+      background-color: rgba(231, 231, 231, 0.5);
+      margin: 10rpx 0rpx;
+      box-sizing: border-box;
+      padding: 20rpx 10rpx;
+      border-radius: 10rpx;
+      width: 100%;
+      box-sizing: border-box;
+  }
+  .up{
+      transform: rotate(-90deg);
+  }
+  .down{
+    transform: rotate(90deg);
+  }
+
+

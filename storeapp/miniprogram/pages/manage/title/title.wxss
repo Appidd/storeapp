@@ -1,0 +1,190 @@
+
+page{
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  position: relative;
+  background-color: skyblue;
+  background-image: url('https://cangku.nxcsoft.top/bg2.png');
+  color: #666666;
+  font-style: 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.chosetab{
+  margin-top: 20rpx;
+  width: 700rpx;
+  height: 90rpx;
+  background-color: white;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  border-radius: 10rpx;
+}
+.btn{
+height: 90rpx;
+width: 350rpx;
+line-height: 90rpx;
+text-align: center;
+box-sizing: border-box;
+}
+.btn:first-child{
+  border-radius: 10rpx 0rpx 0rpx 10rpx;
+}
+.btn:last-child{
+  border-radius: 0rpx 10rpx 10rpx 0rpx;
+}
+.chbtn{
+ color: white;
+  background-image:linear-gradient(to right,#303BF8,#1D86FF);
+ 
+}
+
+.card{
+  margin-top: 20rpx;
+  width: 750rpx;
+ 
+  /* background-color: white; */
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 100rpx;
+
+}
+.addcart{
+    position: fixed;
+    height: 100rpx;
+    width: 100rpx;
+    background: linear-gradient(to right, #303BF8,#1D86FF);
+    bottom: 300rpx;
+    right: 10rpx;
+    border-radius: 50%;
+   
+    font-size: 60rpx;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 999;
+}
+.addcart view{
+    height: 100rpx;
+    line-height: 90rpx;
+}
+.showbox{
+    width: 600rpx;
+   
+    font-style: normal;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50rpx 20rpx;
+    
+  }
+  .boxtitle{
+    margin-bottom: 20rpx;
+    color: #1B1C33;
+    font-weight: 600;
+  
+  }
+  .boxitem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25rpx;
+    padding: 20rpx 20rpx;
+    height: 80rpx;
+    box-sizing: border-box;
+    width: 90%;
+    font-size: 28rpx;
+    background-color: rgba(221, 228, 221, 0.3);
+    border-radius: 40rpx;
+  }
+.btnlist{
+    margin-top: 20rpx;
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+}
+.cancel{
+    height: 60rpx;
+    width: 280rpx;
+    line-height: 60rpx;
+   
+    text-align: center;
+   
+}
+.conform{
+    height: 60rpx;
+    width: 280rpx;
+    line-height: 60rpx;
+  
+    text-align: center;
+
+    color: rgb(219, 66, 66);
+    border-left: 1rpx solid rgb(224, 220, 220);
+}
+.scroll{
+  margin-top: 10rpx;
+  width: 100%;
+  height: 85vh;
+  /* background-color: red; */
+}
+.peoplecard{
+  /* height: 200rpx; */
+  width: 700rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding: 40rpx 20rpx;
+  position: relative;
+}
+.name{
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.set{
+  width: 40rpx;
+  height: 40rpx;
+  /* background-color: red; */
+  position: absolute;
+  right: 15rpx;
+  top: 10rpx;
+  z-index: 888;
+}
+.blue{
+  width: 160rpx;
+  height: 80rpx;
+  /* background-color: red; */
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  
+}
+.choselod{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.choseitem{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.choseitem image{
+  width: 26rpx;
+  height: 26rpx;
+}

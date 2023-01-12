@@ -1,0 +1,94 @@
+<Head showArr="{{true}}"></Head>
+<view class="container">
+    <view class="chosetab">
+        <view class="btn {{curindex==index?'chbtn':''}}" wx:for="{{btnList}}" bindtap="change" data-index="{{index}}">{{item}}</view>
+    </view>
+    <scroll-view scroll-y="{{true}}" class="scroll" scroll-top="{{top}}" bindscrolltolower="requestMoregoods" wx:if="{{curindex==0}}">
+        <view class="card" >
+            <view class="item" wx:for="{{warnList}}" data-id="{{item.id}}" bindtap="todetail" wx:key="{{index}}" style="position: relative;">
+
+                <view style="display: flex;justify-content: space-between;">
+                    <view style="font-weight: 600;width: 300rpx;">所属仓库：{{item.storage_name}}</view>
+                    <view style="color: #309155;width:260rpx;">最小库存：{{item.min_stock}}{{item.unit}}</view>
+                </view>
+
+
+
+                <view>产品名称：{{item.name}}</view>
+
+                <view style="display: flex;justify-content: space-between;">
+                    <view style="color: #4a59bd; width: 300rpx;">产品规格：{{item.spec}}</view>
+
+                    <view style="color: red;width:260rpx;">当前库存：{{item.num}}{{item.unit}}</view>
+
+
+                </view>
+
+            </view>
+        </view>
+
+    </scroll-view>
+    <scroll-view wx:if="{{curindex==1}}" scroll-y="{{true}}" class="scroll" scroll-top="{{top}}" bindscrolltolower="requestMoreorder">
+        <view class="card" >
+            <view class="orderCard" wx:for="{{warnList}}" data-id="{{item.id}}" bindtap="todetailorder">
+                <view class="order_item">
+                    <view class="order_num">
+                        <view>订单号：{{item.order_sn}}</view>
+
+                    </view>
+                    <view class="orderdate">
+                        <view class="date_item">
+                            <image class="order_icon" src="../../images/orders/ddate.png"></image>
+                            <view>下单日期</view>
+                        </view>
+                        <view class="date_item">
+                            <image class="order_icon" src="../../images/orders/status.png"></image>
+                            <view>订单状态</view>
+                        </view>
+
+                    </view>
+                    <view class="orderdate" style="color: #333333;">
+                        <view class="date_item">
+
+                            <view>{{item.make_order_date}}</view>
+                        </view>
+                        <view class="date_item">
+
+                            <view class="marlet">{{item.status==1?'已下单':item.status==2?'已完成':'已发货'}}</view>
+                        </view>
+
+                    </view>
+
+                    <view class="orderdate">
+                        <view class="date_item">
+                            <image class="order_icon" src="../../images/orders/odate.png"></image>
+                            <view>交货日期</view>
+                        </view>
+                        <view class="date_item">
+                            <image class="order_icon" src="../../images/orders/priority.png"></image>
+                            <view>优先级</view>
+                        </view>
+
+                    </view>
+
+                    <view class="orderdate" style="color: #333333;">
+                        <view class="date_item">
+
+                            <view style="color: red;">{{item.delivery_date}}</view>
+                        </view>
+                        <view class="date_item">
+
+                            <view style="{{item.is_time_out==1?'color:red':'color:#E6A23C'}}">{{item.is_time_out==1?'已超期':'未超期'}}</view>
+                        </view>
+                        <view class="date_item">
+
+                            <view class="marlet" style="{{item.priority==1?'color:#FF333A':item.priority==2?'color:#F56C6C ':item.priority==3?'color:#E6A23C':'color:#409EFF'}}">{{item.priority==1?'加急':item.priority==2?'高':item.priority==3?'中':'低'}}</view>
+                        </view>
+
+                    </view>
+                </view>
+            </view>
+            <view style="height: 100rpx;"></view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,4 +1,18 @@
-<!--index.wxml-->
+<Head></Head>
 <view class="container">
-<view bindtap="login">登录</view>
+  <label for="">
+
+    <view class="outer" bindtap="{{haslogin?'tohome':'login'}}" wx:for="{{btnList}}" data-url="{{item.url}}">
+    <image src="../../images/icon/box.png" class="bgimg"></image>
+    <view class="card">
+       <view style="display: flex; align-items: center;">
+        <image src="{{item.icon}}" class="opimg"></image>
+        <view style="margin-left: 10rpx;">{{item.name}}</view>
+       </view>
+        <image src="../../images/icon/arrow.png" class="arrow"></image>
+    </view>
+  </view>
+  </label>
+
+ 
 </view>

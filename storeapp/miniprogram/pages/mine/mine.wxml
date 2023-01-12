@@ -1,2 +1,22 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<Head></Head>
+<view class="mine">
+    <view class="user_message">
+        <image class="head_img" lazyLoad="true" src="{{userInfo.avatarUrl}}"></image>
+        
+        <view class="user_info">
+            <view class="user_name" >{{userInfo.nickName}}</view>
+            
+        </view>
+    </view>
+    <view class="page_lists">
+        <view bindtap="intoPage" class="page_lists_item" wx:for="{{navList}}" data-url="{{item.url}}">
+            <view class="item_left">
+                
+                <view class="item_title">{{item.name}}</view>
+            </view>
+            <image src="../../images/mine/right_arrow.png" style="width: 20rpx;height: 20rpx;margin-right: 20rpx;"></image>
+        </view>
+    </view>
+</view>
+<Inpass id="Inpass" bindrefresh='refresh'></Inpass>
+

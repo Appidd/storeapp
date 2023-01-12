@@ -1,0 +1,18 @@
+<van-popup show="{{ showcheck }}" bind:close="onClose" round>
+    <view class="showbox">
+        <view class="boxtitle">请输入仓库密码</view>
+       
+         <view class="inbox">
+        <input type="text" model:value="{{ password }}" placeholder="请输入六位数密码" class="inppass"/>
+         </view>
+           
+
+      
+
+        <view class="btnlist">
+         <view class="cancel" bindtap="onClose"> 取消</view>
+         <view class="conform" bindtap="checkpassword">确定</view>
+        </view>
+        
+    </view>
+</van-popup>

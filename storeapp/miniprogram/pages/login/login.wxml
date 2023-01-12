@@ -1,0 +1,2 @@
+<button bindtap="login">获取信息</button>
+

@@ -1,1 +1,155 @@
-/* pages/orders/orders.wxss */
+page {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: relative;
+    background-color: skyblue;
+    background-image: url('https://cangku.nxcsoft.top/bg2.png');
+    /* font-style: italic; */
+    font-style: 30rpx;
+}
+
+.chosetab {
+    margin-top: 20rpx;
+    width: 700rpx;
+    height: 90rpx;
+    background-color: white;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-radius: 10rpx;
+}
+
+.btn {
+    height: 90rpx;
+    width: 175rpx;
+    line-height: 90rpx;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.btn:first-child {
+    border-radius: 10rpx 0rpx 0rpx 10rpx;
+}
+
+.btn:last-child {
+    border-radius: 0rpx 10rpx 10rpx 0rpx;
+}
+
+.chbtn {
+    color: white;
+    background-image: linear-gradient(to right, #303BF8, #1D86FF);
+
+}
+
+.card {
+    margin-top: 20rpx;
+    width: 700rpx;
+    /* height: 1200rpx; */
+    background-color: white;
+    border-radius: 10rpx;
+}
+
+.choselod {
+    display: flex;
+    justify-content: space-around;
+    font-size: 26rpx;
+    margin-top: 20rpx;
+}
+
+.choseitem {
+    display: flex;
+    align-items: center;
+    width: 120rpx;
+}
+
+.choseitem image {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.choseitem view {
+    margin-left: 10rpx;
+}
+
+.outrecord {
+    display: flex;
+    margin-top: 30rpx;
+    width: 700rpx;
+    /* height: 60rpx; */
+    /* background-color: red; */
+    padding: 20rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1rpx solid rgb(231, 230, 230);
+
+}
+
+.outitem {
+    display: flex;
+    align-items: center;
+}
+
+.outitem image {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.scroll {
+    width: 100%;
+    height: 66vh;
+    /* background-color: red; */
+
+}
+
+.orderCard {
+    width: 100%;
+    padding: 20rpx;
+    box-sizing: border-box;
+
+}
+
+.order_item {
+    /* height: 200rpx; */
+    background-color: #F3F5F7;
+    font-size: 28rpx;
+    padding: 20rpx;
+    border-radius: 20rpx;
+
+}
+
+.orderCard:last-child {
+    margin-bottom: 100rpx;
+}
+
+.order_num {
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderdate {
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    color: #8D8E99;
+}
+
+.date_item {
+    display: flex;
+    align-items: center;
+    width: 200rpx;
+}
+
+.order_icon {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+}
+
+.marlet {
+    margin-left: 50rpx;
+}

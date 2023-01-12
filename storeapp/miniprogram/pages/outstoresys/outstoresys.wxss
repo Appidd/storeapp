@@ -1,0 +1,151 @@
+/**index.wxss**/
+page {
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+    position: relative;
+    background-color: skyblue;
+    background-repeat: no-repeat;
+    /* position: fixed; */
+    background-image: url('https://cangku.nxcsoft.top/bg1.jpg');
+}
+.scroll{
+    height: 90vh;
+    width: 100vw;
+}
+.container{
+    /* height: 100vh;
+    width: 100vw; */
+    /* background-color: red; */
+}
+.scroll{
+    margin-top: 380rpx;
+    width: 750rpx;
+    height: 70vh;
+    /* background-color: red; */
+}
+.outer{
+    width: 750rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260rpx;
+    /* background-color: #F8FAFB; */
+    margin-top: 0rpx;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+.bgimg{
+ /* background-color: red; */
+  width: 750rpx;
+  height: 260rpx;
+  box-sizing: border-box;
+  top: 0rpx;
+  left: 0rpx;
+}
+
+
+.card{
+  position:absolute;
+    font-style: italic;
+    font-size: 30rpx;
+    width: 750rpx;
+    height: 260rpx;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+}
+
+.img_text{
+  padding: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+.showbox{
+    width: 600rpx;
+   
+    font-style: normal;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50rpx 20rpx;
+    
+  }
+  .boxtitle{
+    margin-bottom: 20rpx;
+    color: #1B1C33;
+    font-weight: 600;
+  
+  }
+  .boxitem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25rpx;
+    padding: 20rpx 20rpx;
+    height: 80rpx;
+    box-sizing: border-box;
+    width: 90%;
+    font-size: 28rpx;
+    background-color: rgba(221, 228, 221, 0.3);
+    border-radius: 40rpx;
+  }
+.btnlist{
+    margin-top: 20rpx;
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+}
+.cancel{
+    height: 60rpx;
+    width: 280rpx;
+    line-height: 60rpx;
+   
+    text-align: center;
+   
+}
+.conform{
+    height: 60rpx;
+    width: 280rpx;
+    line-height: 60rpx;
+  
+    text-align: center;
+
+    color: rgb(219, 66, 66);
+    border-left: 1rpx solid rgb(224, 220, 220);
+}
+.addcart{
+    position: fixed;
+    height: 100rpx;
+    width: 100rpx;
+    background: linear-gradient(to right, #303BF8,#1D86FF);
+    bottom: 300rpx;
+    right: 10rpx;
+    border-radius: 50%;
+   
+    font-size: 60rpx;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.addcart view{
+    height: 100rpx;
+    line-height: 90rpx;
+}
+
+

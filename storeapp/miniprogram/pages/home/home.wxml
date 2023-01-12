@@ -1,2 +1,47 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<Head></Head>
+<view class="container">
+    <view class="title" bindtap="show">{{store.name}}<image src="../../images/icon/qiehuan.png"></image>
+    </view>
+    <view class="num_cat">
+       
+        <view class="item">
+            <image src="../../images/icon/gcat.png" class="icon"></image>
+            <view style="padding: 20rpx;">商品种类</view>
+            
+            <view style="color: #FF7134;font-size: 50rpx;">{{storeData.categoryCount}}</view>
+        </view>
+        <view class="item">
+            <image src="../../images/icon/gnum.png" class="icon"></image>
+            <view style="padding: 20rpx;">商品数量</view>
+            <view style="color: #FF7134;font-size: 50rpx;">{{storeData.productCount}}</view>
+        </view>
+    </view>
+    <view class="bigcard">
+
+        <view class="card_title">
+            <image src="../../images/icon/more.png" class="icon"></image>
+            <view style="padding: 20rpx;">更多管理</view>
+        </view>
+        <view class="item_card">
+            <view class="card" wx:for="{{btnList}}" data-nav="{{item.nav}}" bindtap="navito" data-index="{{index}}">
+                <image class="cardimg" src="{{item.imgurl}}"></image>
+                <view>{{item.name}}</view>
+            </view>
+           
+        </view>
+    </view>
+</view>
+
+<van-popup show="{{ show }}" bind:close="onClose" round>
+    <view class="showbox">
+        <view class="boxtitle">请选择仓库</view>
+        <scroll-view scroll-y="true" class='scroll'>
+            <view class="boxitem" wx:for="{{catList}}" bindtap="close" data-index="{{index}}" bindtap="chooseStore">
+            <image src="../../images/icon/categray.png" style="width: 30rpx;height: 30rpx;"></image>
+            <view style="margin-left: 20rpx;">{{item.name}}</view>
+        </view>
+        </scroll-view>
+    </view>
+</van-popup>
+
+<Inpass id="Inpass" bindrefresh='refresh'></Inpass>

@@ -1,0 +1,85 @@
+<Head showArr="{{true}}"></Head>
+<view class="container">
+
+  <view class="chosetab">
+    <view class="btn {{curindex==index?'chbtn':''}}" wx:for="{{btnList}}" bindtap="change" data-index="{{index}}">{{item}}</view>
+  </view>
+
+
+
+
+
+
+  <scroll-view scroll-y="{{true}}" class="scroll" scroll-top="{{top}}">
+    <view class="card">
+
+      <view class="peoplecard" wx:for="{{personList}}" bindtap="showedit" data-item="{{item}}">
+        <image class="set" src="../../../images/icon/set.png"></image>
+        <image class="blue" src="../../../images/icon/blue.png"></image>
+        <view class="name" style="font-weight: 600;">人员类型：{{item.type==1?'供应商':item.type==2?'客户':'员工'}}</view>
+        <view class="name">姓名：{{item.name}}</view>
+        <view class="name">电话：{{item.phone}}</view>
+        <view class="name">邮箱：{{item.email}}</view>
+        <view class="name">地址：{{item.address||'暂无联系地址'}}</view>
+      </view>
+    </view>
+
+
+
+  </scroll-view>
+
+</view>
+<view class="addcart" bindtap="showadd">
+  <view>+</view>
+</view>
+<van-popup show="{{ showadd }}" bind:close="onClose" round>
+  <view class="showbox">
+    <view class="boxtitle">添加人员</view>
+    <view class="choselod">
+      <view class="choseitem" wx:for="{{choseList}}" bindtap="chose" data-index="{{index}}">
+        <image src="{{type==index+1?'../../../images/icon/checked.png':'../../../images/icon/nchecked.png'}}"></image>
+        <view style="{{type==index+1?'':'color:gray'}}" style="margin-left: 10rpx;">{{item}}</view>
+      </view>
+    </view>
+    <van-cell-group>
+
+
+      <van-field model:value="{{ name }}" label="姓名" placeholder="请输入姓名" required />
+      <van-field model:value="{{ phone }}" label="电话" placeholder="请输入电话" required />
+      <van-field model:value="{{ email }}" label="邮箱" placeholder="请输入邮箱" required />
+      <van-field model:value="{{ address }}" label="联系地址" type="textarea" placeholder="请输入联系地址" autosize />
+
+    </van-cell-group>
+
+    <view class="btnlist">
+      <view class="cancel" bindtap="onClose"> 取消</view>
+      <view class="conform" bindtap="addPersonnel">确定</view>
+    </view>
+  </view>
+</van-popup>
+
+<van-popup show="{{ showedit }}" bind:close="onClose" round>
+  <view class="showbox">
+    <view class="boxtitle">修改信息</view>
+    <view class="choselod">
+      <view class="choseitem" wx:for="{{choseList}}" bindtap="chose" data-index="{{index}}">
+        <image src="{{type==index+1?'../../../images/icon/checked.png':'../../../images/icon/nchecked.png'}}"></image>
+        <view style="{{type==index+1?'':'color:gray'}}" style="margin-left: 10rpx;">{{item}}</view>
+      </view>
+    </view>
+    <van-cell-group>
+
+
+      <van-field model:value="{{ name }}" label="姓名" placeholder="请输入姓名" required />
+      <van-field model:value="{{ phone }}" label="电话" placeholder="请输入电话" required />
+      <van-field model:value="{{ email }}" label="邮箱" placeholder="请输入邮箱" required />
+      <van-field model:value="{{ address }}" label="联系地址" type="textarea" placeholder="请输入联系地址" autosize />
+
+    </van-cell-group>
+
+    <view class="btnlist">
+      <view class="cancel" bindtap="onClose"> 取消</view>
+      <view class="conform" bindtap="editPersonnel">确定</view>
+    </view>
+  </view>
+</van-popup>

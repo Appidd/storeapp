@@ -1,1 +1,182 @@
 /* pages/home/home.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: relative;
+    background-color: skyblue;
+    background-image: url('https://cangku.nxcsoft.top/bg2.png');
+    font-style: italic;
+    font-style: 30rpx;
+}
+
+.title{
+    width: 700rpx;
+    height: 80rpx;
+    display: flex;
+   
+}
+.title image{
+   width: 40rpx;
+   height: 40rpx;
+   margin-left: 12rpx;
+}
+.num_cat{
+    width: 700rpx;
+    display: flex;
+    font-size: 26rpx;
+   
+}
+.num_cat .item{
+    
+    display: flex;
+    align-items: center;
+}
+.item:first-child{
+    margin-right: 100rpx;
+}
+ .icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+.bigcard{
+    width: 100%;
+    /* height: 1000rpx; */
+    background-color: white;
+    border-radius: 40rpx 40rpx 0rpx 0rpx;
+    margin-top: 10rpx;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    padding-bottom: 40rpx;
+}
+.card_title{
+    display: flex;
+    align-items: center;
+    font-size: 26rpx;
+    width: 700rpx;
+}
+ .icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+.item_card{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    flex-wrap: wrap;
+    /* padding: 20rpx; */
+}
+.card1{
+    margin-top: 20rpx;
+
+    width: 300rpx;
+    height: 300rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 26rpx;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+}
+.card{
+    margin-top: 20rpx;
+
+    width: 300rpx;
+    height: 300rpx;
+    background-color: #F3F5F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 26rpx;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+}
+.cardimg{
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.showbox{
+  width: 600rpx;
+ 
+  font-style: normal;
+  display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 50rpx 20rpx;
+  
+}
+.boxtitle{
+  color: #1B1C33;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.boxitem{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-top: 25rpx;
+  padding: 20rpx 20rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  width: 90%;
+  font-size: 28rpx;
+  background-color: rgba(221, 228, 221, 0.3);
+  border-radius: 40rpx;
+}
+.scroll{
+    height: 600rpx;
+}
+.btnlist{
+    margin-top: 20rpx;
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+}
+.cancel{
+    height: 60rpx;
+    width: 200rpx;
+    line-height: 60rpx;
+  /* border: 1rpx solid rgb(214, 93, 93); */
+    text-align: center;
+    color: rgb(146, 141, 141);
+    /* border-radius: 30rpx; */
+    background-color: rgb(243, 243, 243);
+   
+}
+.conform{
+    height: 60rpx;
+    width: 200rpx;
+    line-height: 60rpx;
+    /* border-radius: 30rpx; */
+    text-align: center;
+margin-left: 50rpx;
+    color: white;
+    border: 1rpx solid rgb(61, 127, 226);
+    background-color: #1D86FF;
+    
+}
+.inbox{
+    width: 500rpx;
+    display: flex;
+    align-items: center;
+    font-size: 26rpx;
+    /* border: 2rpx solid #1D86FF; */
+    /* border-radius: 40rpx; */
+    background-color: rgba(243, 240, 240, 0.5);
+    padding: 5rpx 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    box-sizing: border-box;
+}
+

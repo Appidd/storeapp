@@ -1,0 +1,74 @@
+<Head showArr="{{true}}"></Head>
+<view class="container">
+
+  <view class="chosetab">
+    <view class="btn {{curindex==index?'chbtn':''}}" wx:for="{{btnList}}" bindtap="change" data-index="{{index}}">{{item}}</view>
+  </view>
+
+  <scroll-view scroll-y="{{true}}" class="scroll" scroll-top="{{top}}">
+    <view class="card">
+
+      <view class="peoplecard" wx:for="{{titleList}}" bindtap="showedit" data-item="{{item}}">
+        <image class="set" src="../../../images/icon/set.png"></image>
+        <image class="blue" src="../../../images/icon/blue.png"></image>
+        <view class="name">标题名称:{{item.title}}</view>
+        <view class="name">创建时间:{{item.create_time}}</view>
+        
+      </view>
+    </view>
+
+
+
+  </scroll-view>
+
+</view>
+<view class="addcart" bindtap="showadd">
+  <view>+</view>
+</view>
+<van-popup show="{{ showadd }}" bind:close="onClose" round>
+  <view class="showbox">
+    <view class="boxtitle">添加标题</view>
+    <view class="choselod">
+      <view class="choseitem" wx:for="{{choseList}}" bindtap="chose" data-index="{{index}}">
+        <image src="{{type==index+1?'../../../images/icon/checked.png':'../../../images/icon/nchecked.png'}}"></image>
+        <view style="{{type==index+1?'':'color:gray'}}" style="margin-left: 10rpx;">{{item}}</view>
+      </view>
+    </view>
+    <van-cell-group>
+
+
+      <van-field model:value="{{ title }}" label="标题" placeholder="标题" required />
+      
+
+    </van-cell-group>
+
+    <view class="btnlist">
+      <view class="cancel" bindtap="onClose"> 取消</view>
+      <view class="conform" bindtap="addTitle">确定</view>
+    </view>
+  </view>
+</van-popup>
+
+<van-popup show="{{ showedit }}" bind:close="onClose" round>
+  <view class="showbox">
+    <view class="boxtitle">修改标题</view>
+    <view class="choselod">
+      <view class="choseitem" wx:for="{{choseList}}" bindtap="chose" data-index="{{index}}">
+        <image src="{{type==index+1?'../../../images/icon/checked.png':'../../../images/icon/nchecked.png'}}"></image>
+        <view style="{{type==index+1?'':'color:gray'}}" style="margin-left: 10rpx;">{{item}}</view>
+      </view>
+    </view>
+    <van-cell-group>
+
+
+      <van-field model:value="{{ title }}" label="标题" placeholder="请输入标题名称" required />
+      
+
+    </van-cell-group>
+
+    <view class="btnlist">
+      <view class="cancel" bindtap="onClose"> 取消</view>
+      <view class="conform" bindtap="editTitle">确定</view>
+    </view>
+  </view>
+</van-popup>

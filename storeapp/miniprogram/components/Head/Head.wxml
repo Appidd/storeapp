@@ -1,0 +1,5 @@
+<view style="margin-top: {{capsuleInfo.top}}px;height: {{capsuleInfo.height}}px;">    
+<view style="width: 100%;" bindtap="navback" wx:if="{{showArr}}">
+    <image src="../../images/icon/arrow.png" class="navback"  ></image>
+</view>
+</view>

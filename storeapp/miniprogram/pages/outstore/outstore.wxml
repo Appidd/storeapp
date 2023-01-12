@@ -1,0 +1,72 @@
+<Head showArr="{{true}}"></Head>
+<view class="container">
+    <view class="chosetab">
+        <view class="btn">{{ptitle}}</view>
+    </view>
+    <view class="card">
+        <view class="outrecord">
+            <view class="outitem">
+                <van-icon name="records" />
+                <view style="padding: 10rpx;">填写表单</view>
+            </view>
+        </view>
+        <picker mode="date" bindchange='choosedate'>
+            <van-cell title="日期" is-link value="{{date}}" required />
+        </picker>
+
+        <!-- <view class="choselod">
+            <view class="choseitem" wx:for="{{choseList}}" bindtap="chose" data-index="{{index}}">
+                <image src="{{type-1==index?'../../images/icon/checked.png':'../../images/icon/nchecked.png'}}"></image>
+                <view style="{{type-1==index?'':'color:gray'}}" style="margin-left: 10rpx;">{{item}}</view>
+            </view>
+        </view> -->
+        <picker range="{{titleList}}" range-key='title' bindchange='choosetitle'>
+            <van-cell title="标题" is-link value="{{title}}" required />
+        </picker>
+
+        <picker range="{{customList}}" range-key='name' bindchange='choosecustom'>
+            <van-cell title="来往客户" is-link value="{{customer}}" required />
+        </picker>
+        <picker range="{{workerList}}" range-key='name' bindchange='chooseworker'>
+            <van-cell title="经办人" is-link value="{{people}}" required />
+        </picker>
+
+
+
+    </view>
+
+    <view class="card" style="margin-bottom: 100rpx;">
+        <van-cell is-link title="添加产品" link-type="navigateTo" url="/pages/choosegoods/choosegoods" required />
+        <view class="productList">
+            <view class="item" wx:for="{{goodsList}}" wx:key="{{index}}">
+
+                <view style="font-weight: 600;">产品名称：{{item.name}}</view>
+                <view>所属仓库：{{item.storage_name}}</view>
+
+                <view style="display: flex;justify-content: space-between;align-items: center;">
+
+                    <view style="color: #2e48f9;">产品规格：{{item.spec}}</view>
+                    <view>¥{{type==1?item.chup:item.rup}}</view>
+                    <view style="display: flex;">
+                        <view style="display: flex;align-items: center;"> <van-stepper value="{{ item.choosenum }}" bind:change="onChange" data-index="{{index}}"/> </view>
+                    </view>
+
+                </view>
+
+                <view class="delete" bindtap="delete" data-index="{{index}}">删除</view>
+
+            </view>
+        </view>
+        <view style=" padding: 0rpx 20rpx;font-size:26rpx">
+            <view>填写备注</view>
+            <textarea   placeholder="请输入备注必填" class="remark" model:value='{{remark}}' auto-heigh="{{true}}" ></textarea>
+        </view>
+       
+
+
+    </view>
+    <view class="btn1" bindtap="submit">
+            <view>确认</view>
+        </view>
+        <view style="height: 100rpx;"></view>
+</view>

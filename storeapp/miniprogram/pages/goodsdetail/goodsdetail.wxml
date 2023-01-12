@@ -1,0 +1,47 @@
+<Head showArr="{{true}}"></Head>
+<view class="container">
+    <view class="card">
+        <view style="font-size: 30rpx;text-align: center;font-weight: 600;">产品详情</view>
+       
+
+            <van-field model:value="{{ name }}" label="产品名称" />
+            <van-field model:value="{{ spec }}" label="产品规格" />
+            <picker range="{{unitList}}" range-key='name' bindchange='getUnit'>
+                <van-field model:value="{{ unit }}" label="产品单位" readonly/>
+            </picker>
+           
+            <picker range="{{categoryList}}" range-key='name' bindchange='getCat'>
+                <van-field model:value="{{ category_name }}" label="所属分类" readonly/>
+            </picker>
+           
+            <picker range="{{storeList}}" range-key='name' bindchange='getStore'>
+                <van-field model:value="{{ storage_name }}" label="所属仓库" readonly/>
+            </picker>
+            
+            <!-- <van-field model:value="{{ location }}" label="所属仓位" /> -->
+            <!-- <van-field model:value="{{ customer }}" label="所属客户" /> -->
+            <van-field model:value="{{ max_stock }}" label="最大库存" />
+            <van-field model:value="{{ min_stock }}" label="最小库存" />
+            <van-field model:value="{{ num }}" label="库存数量" />
+            <van-field model:value="{{ qc_num }}" label="初期数量" />
+            <van-field model:value="{{ qc_price }}" label="初期总金额" />
+            <van-field model:value="{{ ru_price }}" label="入库价格" />
+            <van-field model:value="{{ chu_price }}" label="出库价格" />
+            <picker range="{{supplierList}}" range-key='name' bindchange='getSupplier'>
+                <van-field model:value="{{ supplier }}" label="供应商" readonly/>
+            </picker>
+            
+            
+
+    </view>
+    <view class="card">
+        <view style="font-size: 28rpx;padding:10rpx 30rpx;color: gray;">产品描述</view>
+            <textarea class="remark" model:value="{{ desc }}" placeholder="请输入对产品的描述"></textarea>
+           
+       
+    </view>
+    <view class="btn1" bindtap="submit">
+    <view>确认修改</view>
+</view>
+
+</view>

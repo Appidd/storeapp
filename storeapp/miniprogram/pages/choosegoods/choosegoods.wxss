@@ -1,0 +1,203 @@
+
+page{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: relative;
+    background-color: skyblue;
+    background-image: url('https://cangku.nxcsoft.top/bg2.png');
+    color: #666666;
+    font-style: 30rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .chosetab{
+    margin-top: 20rpx;
+    width: 700rpx;
+    /* height: 90rpx; */
+    /* background-color: white; */
+  }
+  .van-search{
+    border-radius: 20rpx ;
+   
+  }
+  
+  
+  .card{
+    margin-top: 20rpx;
+    width: 750rpx;
+   
+    background-color: white;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: space-around;
+  }
+  .left{
+    width: 180rpx;
+    /* height: 1400rpx; */
+    /* background-color: red; */
+    background-color: #f7f8fa;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    font-size: 26rpx;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 80vh;
+  }
+  .checkbtn{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  /* background-color: red; */
+  text-align: center;
+  position: relative;
+  /* background-color: blue; */
+  box-sizing: border-box;
+  
+  }
+  .checkbtn::before{
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #f7f8fa;
+  box-sizing: border-box;
+  left: 10rpx;
+  top: 35rpx;
+  }
+  .checkbtnd{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  position: relative;
+  
+  box-sizing: border-box;
+  
+  }
+  .checkedtext{
+  
+  background: linear-gradient(to right, #303BF8,#1D86FF);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  position: relative;
+  
+  box-sizing: border-box;
+  }
+  .checkbtnd::before{
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #303BF8;
+  box-sizing: border-box;
+  left: 20rpx;
+  top: 40rpx;
+  }
+  
+  
+  .right{
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 70%;
+  }
+  .item{
+    font-size: 26rpx;
+    width: 500rpx;
+    /* text-align: center; */
+    margin-top: 20rpx;
+    /* height: 80rpx; */
+    border-radius: 10rpx;
+    /* line-height: 80rpx; */
+    padding: 10rpx 20rpx;
+    background-color: #f7f8fa;
+  }
+  .addcart{
+      position: fixed;
+      height: 100rpx;
+      width: 100rpx;
+      background: linear-gradient(to right, #303BF8,#1D86FF);
+      bottom: 300rpx;
+      right: 10rpx;
+      border-radius: 50%;
+     
+      font-size: 60rpx;
+      color:white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+  }
+  .addcart view{
+      height: 100rpx;
+      line-height: 90rpx;
+  }
+  .showbox{
+      width: 600rpx;
+     
+      font-style: normal;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50rpx 20rpx;
+      
+    }
+    .boxtitle{
+      margin-bottom: 20rpx;
+      color: #1B1C33;
+      font-weight: 600;
+    
+    }
+    .boxitem{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25rpx;
+      padding: 20rpx 20rpx;
+      height: 80rpx;
+      box-sizing: border-box;
+      width: 90%;
+      font-size: 28rpx;
+      background-color: rgba(221, 228, 221, 0.3);
+      border-radius: 40rpx;
+    }
+  .btnlist{
+      margin-top: 20rpx;
+      display: flex;
+      /* background-color: red; */
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      font-size: 30rpx;
+  }
+  .cancel{
+      height: 60rpx;
+      width: 280rpx;
+      line-height: 60rpx;
+     
+      text-align: center;
+     
+  }
+  .conform{
+      height: 60rpx;
+      width: 280rpx;
+      line-height: 60rpx;
+    
+      text-align: center;
+  
+      color: rgb(219, 66, 66);
+      border-left: 1rpx solid rgb(224, 220, 220);
+  }

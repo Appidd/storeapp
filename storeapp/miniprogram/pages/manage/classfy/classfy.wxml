@@ -1,0 +1,52 @@
+<Head showArr="{{true}}"></Head>
+<view class="container">
+
+  <scroll-view scroll-y="{{true}}" class="scroll" scroll-top="{{top}}">
+    <view class="card">
+
+      <view class="peoplecard" wx:for="{{classList}}" bindtap="showedit" data-item="{{item}}">
+        <image class="set" src="../../../images/icon/set.png"></image>
+        <image class="blue" src="../../../images/icon/blue.png"></image>
+        <view class="name">分类名称:{{item.name}}</view>
+        
+      </view>
+    </view>
+
+  </scroll-view>
+
+</view>
+<view class="addcart" bindtap="showadd">
+  <view>+</view>
+</view>
+<van-popup show="{{ showadd }}" bind:close="onClose" round>
+  <view class="showbox">
+    <view class="boxtitle">添加分类</view>
+    
+    <van-cell-group>
+
+
+      <van-field model:value="{{ name }}" label="分类名称" placeholder="请输入分类名称" required />
+      
+    </van-cell-group>
+
+    <view class="btnlist">
+      <view class="cancel" bindtap="onClose"> 取消</view>
+      <view class="conform" bindtap="addClass">确定</view>
+    </view>
+  </view>
+</van-popup>
+
+<van-popup show="{{ showedit }}" bind:close="onClose" round>
+  <view class="showbox">
+    <view class="boxtitle">修改分类</view>
+   
+    <van-cell-group>
+      <van-field model:value="{{ name }}" label="分类名称" placeholder="请输入分类名称" required />
+    </van-cell-group>
+
+    <view class="btnlist">
+      <view class="cancel" bindtap="onClose"> 取消</view>
+      <view class="conform" bindtap="editClass">确定</view>
+    </view>
+  </view>
+</van-popup>

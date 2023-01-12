@@ -1,0 +1,37 @@
+<Head showArr="{{true}}"></Head>
+<view class="container">
+    <view class="chosetab">
+        <view class="btn {{type-1==index?'chbtn':''}}" wx:for="{{btnList}}" bindtap="change" data-index="{{index}}">{{item}}</view>
+    </view>
+    <scroll-view scroll-y="{{true}}" class="scroll" scroll-top="{{top}}" bindscrolltolower="requestMoreData">
+
+        <view class="card">
+            <view class="item" wx:for="{{logList}}" data-id="{{item.id}}" bindtap="todetail" wx:key="{{index}}">
+
+                <!-- <view style="font-weight: 600;">产品名称：{{item.product_name}}</view> -->
+                <view style="font-weight: 600;">仓库名称：{{item.storage_name}}</view>
+                <view>标题：{{item.title}}</view>
+                <view>经办人：{{item.people}}</view>
+                <view>创建时间：{{item.create_time}}</view>
+                <view>记录编号：{{item.stock_sn}}</view>
+                <view style="display: flex;justify-content: space-between;">
+                    <view>产品信息</view>
+                    <view style="display: flex;align-items: center;color: gray;" bindtap="open" data-index="{{index}}">
+                        <view>
+                            共有{{item.product.length}}条记录
+                        </view>
+                        <image src="../../images/mine/right_arrow.png" style="width: 20rpx;height: 30rpx;margin-left: 10rpx;" class="{{item.open?'up':'down'}}"></image>
+                    </view>
+                </view>
+
+                <view class="goodsitem" wx:for-item="product" wx:for="{{item.product}}" hidden="{{!item.open}}">
+                 <view>产品名称：{{product.product_name}}{{product.spec}}</view>
+                 <view style="display: flex;justify-content: space-between;"><view>记录数量：{{product.num}}{{product.unit}}</view>
+                 <view>总价格：{{product.price}}</view></view>
+                </view>
+
+            </view>
+        </view>
+    </scroll-view>
+
+</view>

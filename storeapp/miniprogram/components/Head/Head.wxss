@@ -1,0 +1,7 @@
+/* components/Heard/Head.wxss */
+.navback{
+    width: 20rpx;
+    height: 36rpx;
+    margin-left: 30rpx;
+    transform: rotate(180deg);
+}

@@ -1,0 +1,155 @@
+
+page{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: relative;
+    background-color: skyblue;
+    background-image: url('https://cangku.nxcsoft.top/bg2.png');
+   
+    font-style: 30rpx;
+}
+.chosetab{
+    /* font-style: italic; */
+    margin-top: 20rpx;
+    width: 700rpx;
+    height: 90rpx;
+    background-color: white;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-radius: 10rpx;
+}
+.btn{
+height: 90rpx;
+width: 100%;
+line-height: 90rpx;
+text-align: center;
+box-sizing: border-box;
+background-image:linear-gradient(to right,#303BF8,#1D86FF);
+color: white;
+}
+.btn:first-child{
+    border-radius: 10rpx 0rpx 0rpx 10rpx;
+}
+.btn:last-child{
+    border-radius: 0rpx 10rpx 10rpx 0rpx;
+}
+.chbtn{
+   color: white;
+    background-image:linear-gradient(to right,#303BF8,#1D86FF);
+    box-sizing: border-box;
+}
+.card{
+    margin-top: 20rpx;
+    width: 700rpx;
+   padding-bottom: 20rpx;
+    background-color: white;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+}
+.choselod{
+    display: flex;
+    justify-content: space-around;
+    font-size: 26rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+}
+.choseitem{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.choseitem image{
+    width: 26rpx;
+    height: 26rpx;
+}
+.outrecord{
+    display: flex;
+ 
+    width: 700rpx;
+    
+    padding: 20rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1rpx solid rgb(231, 230, 230);
+    box-sizing: border-box;
+}
+.outitem{
+    display: flex;
+    align-items: center;
+}
+.outitem image{
+    width: 26rpx;
+    height: 26rpx;
+}
+.addimg{
+    width: 100%;
+    display: flex;
+    padding: 20rpx;
+}
+.remark{
+    margin-top: 10rpx;
+    background-color: #f7f8fa;
+    padding: 20rpx;
+    height: 150rpx;
+    width: 600rpx;
+}
+.btn1{
+    height: 100rpx;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26rpx;
+    color: white;
+}
+.btn1 view{
+    height: 90rpx;
+    width: 700rpx;
+    background-image:linear-gradient(to right,#303BF8,#1D86FF);
+    text-align: center;
+    line-height: 90rpx;
+    border-radius: 45rpx;
+}
+.productList{
+    padding: 20rpx;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.procard{
+    width: 600rpx;
+    /* height: 160rpx; */
+    background-color: gray;
+}
+.item{
+    font-size: 26rpx;
+    width: 600rpx;
+    /* text-align: center; */
+    margin-top: 20rpx;
+    /* height: 80rpx; */
+    border-radius: 10rpx;
+    /* line-height: 80rpx; */
+    padding: 10rpx 20rpx;
+    line-height: 40rpx;
+    background-color: #f7f8fa;
+    position: relative;
+  }
+  .delete{
+position: absolute;
+right: 10rpx;
+top: 10rpx;
+width: 100rpx;
+text-align: center;
+padding: 5rpx 10rpx;
+color: red;
+/* background-color: white; */
+  }

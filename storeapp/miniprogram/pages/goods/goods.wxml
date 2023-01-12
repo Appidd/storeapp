@@ -1,2 +1,60 @@
-<!--pages/goods/goods.wxml-->
-<text>pages/goods/goods.wxml</text>
+<Head showArr="{{false}}"></Head>
+<view class="container">
+
+    <view class="chosetab">
+        <van-search value="{{ value }}" shape="round" background="#fff" placeholder="搜索商品" />
+    </view>
+    <view class="card">
+
+
+        <scroll-view scroll-y="{{true}}" class="left">
+
+            <view class="{{index==currentIndex?'checkbtnd':'checkbtn'}}" wx:for="{{categoryList}}" bindtap="choose" data-index="{{index}}" wx:key="{{index}}">
+                <text class="{{index==currentIndex?'checkedtext':''}}">{{item.name}}</text>
+            </view>
+
+        </scroll-view>
+
+
+        <scroll-view scroll-y="{{true}}" class="right" scroll-top="{{top}}">
+           
+
+                <view class="item" wx:for="{{goodsList}}" data-id="{{item.id}}" bindtap="todetail" wx:key="{{index}}">
+
+                    <view style="font-weight: 600;">产品名称：{{item.name}}</view>
+                    <view>所属仓库：{{item.storage_name}}</view>
+
+                    <view style="display: flex;justify-content: space-between;">
+
+                        <view style="color: #2e48f9;">产品规格：{{item.spec}}</view>
+                        <view style="display: flex;">
+                            <view>库存：<text style="color: red;">{{item.num}}</text> {{item.unit}}</view>
+
+                        </view>
+                    </view>
+
+                </view>
+            
+        </scroll-view>
+    </view>
+</view>
+<view class="addcart" bindtap="addcart">
+    <view>+</view>
+</view>
+<van-popup show="{{ show }}" bind:close="onClose" round>
+    <view class="showbox">
+        <view class="boxtitle">添加分类</view>
+        <van-cell-group>
+            <!-- <van-field value="{{ store.id }}" required clearable label="仓库id" disabled placeholder="为默认值" /> -->
+
+            <van-field model:value="{{ name }}" label="分类名称" placeholder="请输入分类名称" required border="{{ false }}" />
+
+        </van-cell-group>
+
+        <view class="btnlist">
+            <view class="cancel" bindtap="onClose"> 取消</view>
+            <view class="conform" bindtap="conformadd">确定</view>
+        </view>
+    </view>
+</van-popup>
+<Inpass id="Inpass" bindrefresh='refresh'></Inpass>

@@ -1,0 +1,68 @@
+<Head showArr="{{true}}"></Head>
+
+<view class="container">
+    <scroll-view class="scroll" scroll-y="{{true}}">
+        <view class="outer" wx:for="{{catList}}" bindtap="chooseStore" data-index="{{index}}">
+            <image src="../../images/icon/box.png" class="bgimg"></image>
+            <view class="card">
+                <image src="../../images/icon/blue.png" style="position: absolute;right: 28rpx;top: 28rpx;height: 80rpx;width: 160rpx;" catchtap="edit" data-item="{{item}}"></image>
+                <image src="../../images/icon/set.png" style="position: absolute;right: 40rpx;top: 36rpx;height: 36rpx;width: 36rpx;" catchtap="edit" data-item="{{item}}"></image>
+                <view class="img_text">
+                    <image src="../../images/icon/storelog.png" class="circle"></image>
+                    <view style="margin-left: 20rpx;">
+                        <view>{{item.name}}</view>
+                        <view style="color: #8D8E99;margin-top: 20rpx;font-size: 26rpx;">{{item.create_time}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="outer" bindtap="addshow">
+            <image src="../../images/icon/box.png" class="bgimg"></image>
+            <view class="card">
+                <view class="img_text" style="width: 100%;flex-direction: column;">
+                    <image src="../../images/icon/add.png" class="circle"></image>
+                    <view style="font-style: normal;margin-top: 10rpx;">添加仓库</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+
+
+</view>
+
+<view class="addcart" bindtap="addshow" wx:if="{{catList.length>4}}">
+    <view>+</view>
+</view>
+<van-popup show="{{ show }}" bind:close="onClose" round>
+    <view class="showbox">
+        <view class="boxtitle">添加顶级仓库</view>
+        <van-cell-group>
+            <van-field model:value="{{ storage_name }}" required label="仓库名称" placeholder="请输入顶级仓库名称" />
+            <van-field model:value="{{ username }}" required label="添加人员" placeholder="为默认值" />
+            <van-field model:value="{{ password }}" label="核验密码" placeholder="请输入核验密码" required border="{{ false }}" />
+
+        </van-cell-group>
+
+        <view class="btnlist">
+            <view class="cancel" bindtap="onClose"> 取消</view>
+            <view class="conform" bindtap="addstore">确定</view>
+        </view>
+    </view>
+</van-popup>
+
+<van-popup show="{{ editshow }}" bind:close="onClose" round>
+    <view class="showbox">
+        <view class="boxtitle">编辑仓库</view>
+        <van-cell-group>
+            <van-field model:value="{{ storage_name }}" required label="仓库名称" placeholder="请输入仓库名称" />
+            <van-field model:value="{{ username }}" required label="添加人员" placeholder="为默认值" />
+            <van-field model:value="{{ password }}" label="核验密码" placeholder="请输入核验密码" required border="{{ false }}" />
+
+        </van-cell-group>
+
+        <view class="btnlist">
+            <view class="cancel" bindtap="onClose"> 取消</view>
+            <view class="conform" bindtap="editstore">确定</view>
+        </view>
+    </view>
+</van-popup>

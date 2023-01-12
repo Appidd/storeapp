@@ -1,0 +1,52 @@
+<Head showArr="{{true}}"></Head>
+<view class="container">
+    <view class="card">
+        <view style="font-size: 30rpx;text-align: center;font-weight: 600;">订单详情</view>
+       
+
+            <van-field model:value="{{ product_name }}" label="产品名称" />
+            <van-field model:value="{{ spec }}" label="产品规格" />
+            <van-field model:value="{{ caizhi }}" label="产品材质" />
+                <van-field model:value="{{ num }}" label="订单数量" />
+            
+                <picker mode="date" bindchange='getmake_order_date'>
+            <van-field model:value="{{ make_order_date}}" label="下单时间" readonly/>
+           </picker>
+           <picker mode="date" bindchange='getdelivery_date'>
+            <van-field model:value="{{ delivery_date }}" label="交货时间" readonly/>
+           </picker>
+           <picker range='{{statusList}}' bindchange='getstatus'>
+            <van-field model:value="{{ status==1?'已下单':status==2?'生产中':status==3?'已完成':'已发货'}}" label="订单状态" readonly/>
+           </picker>
+           <picker range="{{priorityList}}" range-key='name' bindchange='getpriority'>
+                <van-field value="{{ priority==1?'加急':priority==2?'高':priority==3?'中':'低' }}" label="优先级" readonly/>
+            </picker>
+           
+               
+            
+            
+            <van-field model:value="{{ cubing }}" label="工序粗柄" /> 
+          <van-field model:value="{{ jingren }}" label="工序精刃" />
+            <van-field model:value="{{ luowen }}" label="工序螺纹" />
+            <van-field model:value="{{ chanshao }}" label="工序产稍" />
+            <van-field model:value="{{ bikong }}" label="避空" />
+            <van-field model:value="{{ jingbing }}" label="精柄" />
+            
+            <view style="font-size: 28rpx;padding:10rpx 30rpx;color: gray;">备注</view>
+            <textarea class="remark" model:value="{{ remark }}"></textarea>
+            <view style="font-size: 28rpx;padding:10rpx 30rpx;color: gray;">加急备注</view>
+            <textarea class="remark" model:value="{{ urgent_remark }}" placeholder="请输入加急备注"></textarea>
+            <view style="font-size: 28rpx;padding:10rpx 30rpx;color: gray;">待完成备注</view>
+            <textarea class="remark" model:value="{{ wait_remark }}" placeholder="请输入待完成备注"></textarea>
+           
+            <view style="font-size: 28rpx;padding:10rpx 30rpx;color: gray;">已完成备注</view>
+            <textarea class="remark" model:value="{{ finish_remark }}" placeholder="请输入已完成备注"></textarea>
+           
+
+    </view>
+    
+    <view class="btn1" bindtap="submit">
+    <view>确认修改</view>
+</view>
+
+</view>
